@@ -49,3 +49,5 @@ make -j$(nproc)
 sudo make -j$(nproc) install
 
 emacs --version
+
+echo "Emacs is now installed. Restart your computer to avoid copy mode."
