@@ -8,3 +8,8 @@ sbcl --no-sysinit --no-userinit --load /tmp/ql.lisp \
        --eval '(quicklisp-quickstart:install :path "~/.quicklisp")' \
        --eval '(ql:add-to-init-file)' \
        --quit
+
+echo -e '\n#+quicklisp\n(progn\n(push "~/quicklisp/local-projects/"\n      ql:*local-project-directories*)\n)' >> ~/.sbclrc
+
+# TODO: https://stackoverflow.com/a/57706178
+# Adds local-projects to where quicklisp scans
